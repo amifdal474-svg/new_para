@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NP NEW PARA - Votre Parapharmacie en Ligne au Maroc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="WhatsApp Image 2025-11-06 à 12.15.22_e270b4cd.jpg" alt="Logo NP NEW PARA" class="logo">
+            <h1>NEW PARA <small>PARAPHARMACIE</small></h1>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Rechercher un produit, une marque..." onkeyup="appliquerFiltres()">
+        </div>
+    </header>
+
+    <main>
+        <aside class="filters">
+            <h3>Filtres & Tri</h3>
+
+            <h4>Catégories</h4>
+            <select id="category-filter" onchange="appliquerFiltres()">
+                <option value="Toutes">Toutes les catégories</option>
+                </select>
+
+            <h4>Trier par Prix</h4>
+            <select id="sort-price" onchange="appliquerFiltres()">
+                <option value="default">Par défaut</option>
+                <option value="asc">Prix Croissant</option>
+                <option value="desc">Prix Décroissant</option>
+            </select>
+            
+            <h4>Prix Max (<span id="price-value">500 MAD</span>)</h4>
+            <input type="range" id="price-range" min="0" max="500" value="500" step="10" oninput="document.getElementById('price-value').textContent = this.value + ' MAD'; appliquerFiltres()">
+
+        </aside>
+
+        <section id="product-list" class="product-grid">
+            </section>
+    </main>
+
+    <footer>
+        <p>NP NEW PARA - Parapharmacie au Maroc</p>
+        <p>Contact : Tél : 05 22 71 55 15 | Email : newpara2013@gmail.com</p>
+        <p>Adresse : hay EL walaa sect 1 Tr 5 Imm 8 N°6 sidi Moumen Casablanca</p>
+    </footer>
+
+    <script src="produits.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
